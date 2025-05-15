@@ -1,0 +1,27 @@
+/* Fond de la page en bleu */
+body {
+    background-color: #3680d6; /* bleu vif, tu peux changer la couleur si besoin */
+    font-family: Arial, sans-serif;
+    color: white; /* Pour que le texte ressorte bien */
+    padding: 20px;
+}
+
+/* Conteneur général */
+#les_series {
+    display: flex;
+    flex-wrap: wrap;         /* Permet de passer à la ligne après deux éléments */
+    justify-content: center; /* Centre les boîtes horizontalement */
+    gap: 20px;               /* Espace entre les boîtes */
+}
+
+/* Chaque boîte de série */
+#les_series > div {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
