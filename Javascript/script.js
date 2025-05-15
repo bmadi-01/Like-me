@@ -31,10 +31,30 @@ function afficheLesSeries() {
         const description = document.createElement("p");
         description.innerText = "Le film est disponible sur toutes les plateformes de streaming.";
 
+        // Bouton "J'aime"
+        const likeButton = document.createElement("button");
+        likeButton.innerHTML = "👍 J'aime";
+        likeButton.style.cursor = "pointer";
+        likeButton.style.backgroundColor = "#f0f0f0";
+        likeButton.style.border = "1px solid #ccc";
+        likeButton.style.borderRadius = "5px";
+        likeButton.style.padding = "5px 10px";
+        likeButton.style.marginTop = "10px";
+
+// Comportement au clic : change de couleur
+        let liked = false;
+        likeButton.addEventListener("click", () => {
+            liked = !liked;
+            likeButton.style.backgroundColor = liked ? "#28a745" : "#f0f0f0"; // vert si cliqué
+            likeButton.style.color = liked ? "white" : "black";
+        });
+
         // Ajouter les éléments dans la boîte
         boxSeries.appendChild(img);
         boxSeries.appendChild(titre);
         boxSeries.appendChild(description);
+        // Ajouter le bouton à la boîte
+        boxSeries.appendChild(likeButton);
 
         // Ajouter la boîte à la liste
         listeSeries.appendChild(boxSeries);
